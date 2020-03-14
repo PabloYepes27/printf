@@ -4,7 +4,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdarg.h>
+#include <unistd.h>
 
 int _printf(const char *format, ...);
-
-#endif // !HOLBERTON_H
+int _putchar(char *c);
+#endif
