@@ -2,5 +2,42 @@
 
 int _printf(const char *format, ...)
 {
-    char *str;
+	int i = 0;
+	va_list args;
+
+	va_start(args, format);
+	while (format == NULL)
+	{	printf("\n");
+		return (0);
+	}
+	while (format[i] != '\0')
+	{
+        if (format[i - 1] != '%' && format[i] != '%')
+            putchar(format[i]);
+        else
+        {
+            switch (format[i])
+		    {
+                case 'c':
+                    putchar((char)va_arg(args, int));
+                    break;
+                case 's':
+                    _putchar(va_arg(args, char *));
+                    break;
+                /*case 'd':
+                    putchar(va_arg(args, int));
+                    break;
+                case 'f':
+                    putchar((float)va_arg(args, double));
+                    break;
+                case 's':
+                    putchar(va_arg(args, char *));
+                    break;*/
+            }
+        }
+        
+        i++;
+    }
+	va_end(args);
+    return (i);
 }
