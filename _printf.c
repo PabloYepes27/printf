@@ -2,5 +2,5 @@
 
 int _printf(const char *format, ...)
 {
-    
+    char *str;
 }
