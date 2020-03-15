@@ -2,7 +2,7 @@
 
 int _printf(const char *format, ...)
 {
-	int i = 0;
+	int i = 0, leng = 0;
 	va_list args;
 
 	va_start(args, format);
@@ -19,9 +19,11 @@ int _printf(const char *format, ...)
             switch (format[i])
 		    {
                 case 'c':
+                    leng = -1;
                     putchar((char)va_arg(args, int));
                     break;
                 case 's':
+                    leng = strlen(va_arg(args, char *)) - 2;
                     _putchar(va_arg(args, char *));
                     break;
                 /*case 'd':
@@ -34,10 +36,9 @@ int _printf(const char *format, ...)
                     putchar(va_arg(args, char *));
                     break;*/
             }
-        }
-        
+        }    
         i++;
     }
 	va_end(args);
-    return (i);
+    return (i + leng);
 }
