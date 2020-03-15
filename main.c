@@ -11,10 +11,11 @@ int main(void)
 {
     int len;
     int len2;
+    char *str = "printf";
     /*unsigned int ui;
     void *addr;*/
 
-    len = _printf("Let's try t%c printf a simple sentence.\n", 'o');
+    len = _printf("Let's try to %s a simple sentence.\n", str);
     len2 = printf("Let's try to printf a simple sentence.\n");
     /*_printf("%i, %d\n", 23, 32);
     ui = (unsigned int)INT_MAX + 1024;

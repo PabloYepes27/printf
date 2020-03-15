@@ -9,5 +9,10 @@
 */
 int _putchar(char *c)
 {
-	return (write(1, &c, 1));
+	int i;
+	for (i = 0; c[i]; i++)
+	{
+	}
+		return (write(1, &c, i));
 }
+
