@@ -10,6 +10,7 @@
 int _put(char *c)
 {
 	int i = 0;
+
 	while (*c != '\0')
 	{
 		putchar(*c);
@@ -29,6 +30,7 @@ int _put(char *c)
 int _put_int(int *c)
 {
 	int i = 0;
+
 	while (*c != '\0')
 	{
 		putchar(*c);
