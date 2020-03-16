@@ -30,6 +30,7 @@ int _printf(const char *format, ...)
 						return (-1);
 					leng += _put(str);
 					break;
+				/*case 'b'*/
 			}
 		}
 		i++;
