@@ -1,5 +1,10 @@
 #include "holberton.h"
 
+/**
+* _printf - function like printf.
+* @format: format to print.
+* Return: lenght.
+*/
 int _printf(const char *format, ...)
 {
 	int i = 0, leng = 0, count = 0;
