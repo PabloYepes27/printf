@@ -7,13 +7,12 @@
 * Return: On success 1.
 * On error, -1 is returned, and errno is set appropriately.
 */
-int _putchar(char *c)
+void _put(char *c)
 {
-	int i;
-	for (i = 0; c[i]; i++)
+	while (*c != '\0')
 	{
-		putchar(c[i]);
+		putchar(*c);
+		c++;
 	}
-	return (i);
 }
 
