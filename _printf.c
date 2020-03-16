@@ -37,8 +37,7 @@ int _printf(const char *format, ...)
 					break;
 				case 'i':
 				case 'd':
-					leng++;
-					print_number(va_arg(args, int));
+					leng += print_number(va_arg(args, int));
 					break;
 			}
 		}
