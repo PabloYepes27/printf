@@ -2,7 +2,7 @@
 
 int _printf(const char *format, ...)
 {
-	int i = 0, leng = 0;
+	int i = 0, leng = 0, count = 0;
 	va_list args;
 	char *str;
 
@@ -19,30 +19,21 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
+			count++;
 			switch (format[i])
 			{
 				case 'c':
-					leng = -1;
+					leng++;
 					putchar((char)va_arg(args, int));
 					break;
 				case 's':
 					str = va_arg(args, char *);
-					leng = strlen(str) - 2;
-					_put(str);
+					leng = _put(str);
 					break;
-				/*case 'i':
-					putchar(va_arg(args, int));
-					break;
-				case 'd':
-					putchar(va_arg(args, double));
-					break;
-				case 'f':
-					putchar((float)va_arg(args, double));
-					break;*/
 			}
 		}    
 		i++;
 	}
 	va_end(args);
-	return (i + leng);
+	return (i + leng - count);
 }
