@@ -28,7 +28,7 @@ int _printf(const char *format, ...)
 					break;
 				case 's':
 					str = va_arg(args, char *);
-					leng = _put(str);
+					leng += _put(str);
 					break;
 			}
 		}    
