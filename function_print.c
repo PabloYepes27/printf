@@ -25,9 +25,9 @@ int _put(char *c)
 * @n: integer number.
 * Return: upper pointer.
 */
-void print_number(int n)
+int print_number(int n)
 {
-	int aux = 0;
+	int aux = 0, i = 0, l = 0, z = 0;
 
 	if (n == INT_MIN)
 	{
@@ -39,14 +39,16 @@ void print_number(int n)
 	{
 		n = -n;
 		putchar('-');
+		i++;
 	}
 
 	if (n / 10 != 0)
-		print_number(n / 10);
+		l = (z + print_number(n / 10));
 
 	if (aux == 1)
 		putchar('8');
 	else
 		putchar(n % 10 + '0');
-	return (i);
+	i++;
+	return (i + l);
 }
