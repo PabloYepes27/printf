@@ -1,5 +1,10 @@
 #include "holberton.h"
 
+/**
+* _printf - function like printf.
+* @format: format to print.
+* Return: lenght.
+*/
 int _printf(const char *format, ...)
 {
 	int i = 0, leng = 0, count = 0;
@@ -29,6 +34,11 @@ int _printf(const char *format, ...)
 					if (str == NULL)
 						return (-1);
 					leng += _put(str);
+					break;
+				case 'i':
+				case 'd':
+					leng++;
+					print_number(va_arg(args, int));
 					break;
 			}
 		}

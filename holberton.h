@@ -5,9 +5,10 @@
 #include <string.h>
 #include <stdarg.h>
 #include <unistd.h>
+#include <limits.h>
 
 int _printf(const char *format, ...);
 int _put(char *c);
-int _put_int(int *c);
+void print_number(int n);
 int _bin(int b);
 #endif
