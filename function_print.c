@@ -48,4 +48,5 @@ void print_number(int n)
 		putchar('8');
 	else
 		putchar(n % 10 + '0');
+	return (i);
 }
