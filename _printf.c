@@ -30,6 +30,11 @@ int _printf(const char *format, ...)
 						return (-1);
 					leng += _put(str);
 					break;
+				case 'i':
+				case 'd':
+					leng++;
+					print_number(va_arg(args, int));
+					break;
 			}
 		}
 		i++;
