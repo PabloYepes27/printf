@@ -14,8 +14,8 @@ int main(void)
 	/*unsigned int ui;
 	void *addr;*/
 
-	len = _printf("Let's try t%c printf a simple sentence.\n", 'o');
-	len2 = printf("Let's try to printf a simple sentence.\n");
+	len = _printf("Let's try t%c print%c a simple sentence.\n", 'o', 'f');
+	len2 = printf("Let's try t%c print%c a simple sentence.\n",'o', 'f');
 	/*_printf("%i, %d\n", 23, 32);
 	ui = (unsigned int)INT_MAX + 1024;
 	addr = (void *)0x7ffe637541f0;
@@ -31,8 +31,11 @@ int main(void)
 	printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
 	_printf("Character:[%c]\n", 'H');
 	printf("Character:[%c]\n", 'H');*/
-	len = _printf("String:[%s]\n", "I am a string !");
-	len2 = printf("String:[%s]\n", "I am a string !");
+	len = _printf("String:[%s], %s, %s\n", "I am a string !", "sammy", "Juan");
+	len2 = printf("String:[%s], %s, %s\n", "I am a string !", "sammy", "Juan");
+	printf("Length:[%d, %d]\n", len2, len);
+	len = _printf("String:[%s]%c\n", "",'s');
+	len2 = printf("String:[%s]%c\n", "",'s');
 	printf("Length:[%d, %d]\n", len2, len);
 	/*_printf("Address:[%p]\n", addr);
 	printf("Address:[%p]\n", addr);
