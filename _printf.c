@@ -39,6 +39,9 @@ int _printf(const char *format, ...)
 				case 'f':
 					putchar((float)va_arg(args, double));
 					break;*/
+				case 'b':
+					bin(va_arg(args, int));
+					break;
 			}
 		}    
 		i++;

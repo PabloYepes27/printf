@@ -8,4 +8,5 @@
 
 int _printf(const char *format, ...);
 void _put(char *c);
+int bin(int b);
 #endif
