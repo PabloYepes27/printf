@@ -10,7 +10,7 @@
 int _bin(int b)
 {
 	int i = 0, j;
-	char p[100];
+	char p[1000];
 	while (b > 0)
 	{
 		p[i] = b % 2;
