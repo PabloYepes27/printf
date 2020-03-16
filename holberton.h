@@ -9,4 +9,5 @@
 int _printf(const char *format, ...);
 int _put(char *c);
 int _put_int(int *c);
+int _bin(int b);
 #endif
