@@ -25,7 +25,7 @@ int _put(char *c)
 * @c: The pointer to print
 *
 * Return: On success 1.
-* On error, -1 is returned, and errno is set appropriately.
+* On error, -1 is returned, and errno is set appropriately .
 */
 int _put_int(int *c)
 {
