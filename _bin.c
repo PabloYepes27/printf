@@ -9,11 +9,11 @@
 */
 int _bin(int b)
 {
-	int i = 0, *p;
+	int i = 0;
 	while (b > 0)
 	{
-		p[i] = b % 2;
-		b /= 2
+		/*p[i] = b % 2;*/
+		b /= 2;
 		i++;
 	}
 	return (i);
