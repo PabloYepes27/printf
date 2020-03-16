@@ -7,5 +7,6 @@
 #include <unistd.h>
 
 int _printf(const char *format, ...);
-void _put(char *c);
+int _put(char *c);
+int _put_int(int *c);
 #endif
