@@ -7,10 +7,8 @@ int _printf(const char *format, ...)
 	char *str;
 
 	va_start(args, format);
-	while (format == NULL)
-	{	printf("\n");
-		return (0);
-	}
+	if (!format)
+		return (-1);
 	while (format[i] != '\0')
 	{
 		if (format[i - 1] != '%' && format[i] != '%')
@@ -28,6 +26,8 @@ int _printf(const char *format, ...)
 					break;
 				case 's':
 					str = va_arg(args, char *);
+					if (str == NULL)
+						return (-1);
 					leng += _put(str);
 					break;
 			}
