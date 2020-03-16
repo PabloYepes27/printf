@@ -42,6 +42,9 @@ int _printf(const char *format, ...)
 					break;
 				case '%':
 					break;
+				case 'b':
+					_bin(va_arg(args, int));
+					break;
 				default:
 					leng++;
 					putchar(format[i]);
