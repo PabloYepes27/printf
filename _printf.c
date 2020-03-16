@@ -26,14 +26,14 @@ int _printf(const char *format, ...)
                     leng = strlen(va_arg(args, char *)) - 2;
                     _putchar(va_arg(args, char *));
                     break;
-                /*case 'd':
+                /*case 'i':
                     putchar(va_arg(args, int));
+                    break;
+                case 'd':
+                    putchar(va_arg(args, double));
                     break;
                 case 'f':
                     putchar((float)va_arg(args, double));
-                    break;
-                case 's':
-                    putchar(va_arg(args, char *));
                     break;*/
             }
         }    

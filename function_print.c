@@ -12,7 +12,8 @@ int _putchar(char *c)
 	int i;
 	for (i = 0; c[i]; i++)
 	{
+		putchar(c[i]);
 	}
-		return (write(1, &c, i));
+	return (i);
 }
 
