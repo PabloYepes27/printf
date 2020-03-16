@@ -1,5 +1,6 @@
 #include "holberton.h"
 
+
 /**
 * _printf - function like printf.
 * @format: format to print.
@@ -17,9 +18,9 @@ int _printf(const char *format, ...)
 	while (format[i] != '\0')
 	{
 		if (format[i - 1] != '%' && format[i] != '%')
-		{
 			putchar(format[i]);
-		}
+		else if (format[i - 1] == '%' && format[i] == '%')
+			putchar(format[i]);
 		else
 		{
 			count++;
@@ -38,6 +39,12 @@ int _printf(const char *format, ...)
 				case 'i':
 				case 'd':
 					leng += print_number(va_arg(args, int));
+					break;
+				case '%':
+					break;
+				default:
+					leng++;
+					putchar(format[i]);
 					break;
 			}
 		}
