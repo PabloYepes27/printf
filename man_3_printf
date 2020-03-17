@@ -1,0 +1,47 @@
+.TH _PRINTF 1 "17 Mar 2020" "1.0" "User commands"
+.SH NAME
+.B _printf
+- format and print data
+.SH SYNOPSIS
+_printf FORMAT [ARGUMENT]...
+_printf OPTION
+#include <stdio.h>
+.SH DESCRIPTION
+Print ARGUMENT(s) according to FORMAT, or execute according to OPTION:
+
+--help
+        display this help and exit
+
+--version
+        output version information and exit
+
+.B FORMAT
+
+%%      a single %
+
+%b      the unsigned int argument is converted to binary
+
+.B The conversion specifier
+
+i, d
+        The int argument is converted to signed decimal notation. print a decimal (base 10) number. The default precision is 1.
+
+c
+        If no l modifier is present, the int argument is converted to an unsigned char, and the resulting character is written.
+
+s
+        If no l modifier is present: The const char * argument is expected to be a pointer to an array of character type (pointer to a string).
+
+
+.SH SEE ALSO
+printf(3)
+
+The full documentation for printf is maintained as a Texinfo manual.  If the info and printf programs are properly installed  at  your  site,  the command
+
+        info coreutils 'printf invocation'
+
+should give you access to the complete manual.
+.SH BUGS
+No known bugs.
+.SH AUTHOR
+Sammy Guttman, Juan Pablo Yepes.
