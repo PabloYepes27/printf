@@ -27,7 +27,7 @@ int _put(char *c)
 * Return: lenght characters.
 * On error, -1 is returned, and errno is set appropriately.
 */
-int _other_print(char c, char p)
+int _other_print(char c, char p, char q)
 {
 	int i = 0;
 
@@ -37,8 +37,14 @@ int _other_print(char c, char p)
 		putchar(c);
 		i = 2;
 	}
-	if (c == p && p == '%')
+	if (c == p && p == '%' && q != '%')
+	{
+		putchar('%');
 		i++;
+	}
+	if (c == p && p == '%' && q == p)
+		i = i + 2;
+	
 	return (i);
 }
 
