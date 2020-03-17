@@ -9,7 +9,8 @@
 */
 int _bin(unsigned int b)
 {
-	unsigned int i = 0, j;
+	unsigned int i = 0, 
+	int j;
 	char p[1000];
 
 	while (b > 0)
