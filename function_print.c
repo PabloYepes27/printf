@@ -17,6 +17,28 @@ int _put(char *c)
 		c++;
 		i++;
 	}
+	return (i - 1);
+}
+
+/**
+* _other_print - writes the character c to stdout
+* @c: The character to print
+*
+* Return: lenght characters.
+* On error, -1 is returned, and errno is set appropriately.
+*/
+int _other_print(char c)
+{
+	int i = 0;
+
+	if (c != '%')
+		putchar('%');
+	else
+		return (0);
+
+	putchar(c);
+	i++;
+
 	return (i);
 }
 
