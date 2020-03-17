@@ -43,7 +43,7 @@ int _printf(const char *format, ...)
 				case '%':
 					break;
 				case 'b':
-					_bin(va_arg(args, int));
+					leng += _bin(va_arg(args, int));
 					break;
 				default:
 					leng++;
