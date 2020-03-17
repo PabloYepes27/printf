@@ -9,10 +9,14 @@
 */
 int _bin(unsigned int b)
 {
-	unsigned int i = 0, 
-	int j;
-	char p[1000];
+	int i = 0, j;
+	char p[1000] = {'\0'};
 
+	if (b == 0)
+	{
+		putchar('0');
+		return (1);
+	}
 	while (b > 0)
 	{
 		p[i] = b % 2;
