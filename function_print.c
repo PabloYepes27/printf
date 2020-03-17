@@ -23,22 +23,22 @@ int _put(char *c)
 /**
 * _other_print - writes the character c to stdout
 * @c: The character to print
-*
+* @p: the previous character
 * Return: lenght characters.
 * On error, -1 is returned, and errno is set appropriately.
 */
-int _other_print(char c)
+int _other_print(char c, char p)
 {
 	int i = 0;
 
 	if (c != '%')
+	{
 		putchar('%');
-	else
-		return (0);
-
-	putchar(c);
-	i++;
-
+		putchar(c);
+		i = 2;
+	}
+	if (c == p && p == '%')
+		i++;
 	return (i);
 }
 
