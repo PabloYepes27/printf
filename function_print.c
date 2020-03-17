@@ -24,6 +24,7 @@ int _put(char *c)
 * _other_print - writes the character c to stdout
 * @c: The character to print
 * @p: the previous character
+* @q: the newt character
 * Return: lenght characters.
 * On error, -1 is returned, and errno is set appropriately.
 */
@@ -37,14 +38,14 @@ int _other_print(char c, char p, char q)
 		putchar(c);
 		i = 2;
 	}
-	if (c == p && p == '%' && q != '%')
+	if (c == p && p == '%' && (q != '%' && q !='\n'))
 	{
 		putchar('%');
 		i++;
 	}
 	if (c == p && p == '%' && q == p)
 		i = i + 2;
-	
+
 	return (i);
 }
 
