@@ -32,10 +32,10 @@ int _other_print(char c)
 	int i = 0;
 
 	if (c != '%')
+	{
 		putchar('%');
-	else
-		return (0);
-
+		i++;
+	}
 	putchar(c);
 	i++;
 
