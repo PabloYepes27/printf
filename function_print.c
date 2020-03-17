@@ -11,6 +11,8 @@ int _put(char *c)
 {
 	int i = 0;
 
+	if (c == NULL)
+		c = "(null)";
 	while (*c != '\0')
 	{
 		putchar(*c);

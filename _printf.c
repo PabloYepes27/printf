@@ -28,8 +28,6 @@ int _printf(const char *format, ...)
 					break;
 				case 's':
 					str = va_arg(args, char *);
-					if (str == NULL)
-						return (-1);
 					leng += _put(str);
 					break;
 				case 'i':
