@@ -38,7 +38,7 @@ int _other_print(char c, char p, char q)
 		putchar(c);
 		i = 2;
 	}
-	if (c == p && p == '%' && (q != '%' && q !='\n'))
+	if (c == p && p == '%' && (q != '%' && q != '\n'))
 	{
 		putchar('%');
 		i++;
