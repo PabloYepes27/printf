@@ -11,5 +11,5 @@ int _printf(const char *format, ...);
 int _put(char *c);
 int print_number(int n);
 int _bin(unsigned int b);
-int _other_print(char c, char p);
+int _other_print(char c, char p, char q);
 #endif

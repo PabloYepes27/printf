@@ -13,7 +13,7 @@ int _printf(const char *format, ...)
 	char *str;
 
 	va_start(args, format);
-	if (!format)
+	if (!format || *format == '%')
 		return (-1);
 	while (format[i] != '\0')
 	{
@@ -40,7 +40,7 @@ int _printf(const char *format, ...)
 					leng += _bin(va_arg(args, int));
 					break;
 				default:
-					leng +=	_other_print(format[i], format[i - 1]);
+					leng +=	_other_print(format[i], format[i - 1], format[i + 1]);
 					break;
 			}
 		}
