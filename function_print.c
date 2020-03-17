@@ -17,7 +17,7 @@ int _put(char *c)
 		c++;
 		i++;
 	}
-	return (i - 1);
+	return (i);
 }
 
 /**
