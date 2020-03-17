@@ -19,8 +19,8 @@ int _printf(const char *format, ...)
 	{
 		if (format[i - 1] != '%' && format[i] != '%')
 			putchar(format[i]);
-		else if (format[i - 1] == '%')
-		{	count++;
+		else if (format[i - 1] == '%' && format[i] != '%')
+		{	count = count + 2;
 			switch (format[i])
 			{   case 'c':
 					leng++;
