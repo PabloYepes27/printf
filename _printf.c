@@ -19,7 +19,7 @@ int _printf(const char *format, ...)
 	{
 		if (format[i - 1] != '%' && format[i] != '%')
 			putchar(format[i]);
-		else if (format[i - 1] == '%' && format[i] != '%')
+		else if (format[i - 1] == '%')
 		{	count = count + 2;
 			switch (format[i])
 			{   case 'c':
@@ -40,7 +40,7 @@ int _printf(const char *format, ...)
 					leng += _bin(va_arg(args, int));
 					break;
 				default:
-					leng +=	_other_print(format[i]);
+					leng +=	_other_print(format[i], format[i - 1]);
 					break;
 			}
 		}
