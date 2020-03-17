@@ -19,14 +19,10 @@ int _printf(const char *format, ...)
 	{
 		if (format[i - 1] != '%' && format[i] != '%')
 			putchar(format[i]);
-		/*else if (format[i - 1] == '%' && format[i] == '%')
-			putchar(format[i]);*/
-		else if (format[i - 1] == '%')
-		{
-			count++;
+		else if (format[i - 1] == '%' && format[i] != '%')
+		{	count = count + 2;
 			switch (format[i])
-			{
-				case 'c':
+			{   case 'c':
 					leng++;
 					putchar((char)va_arg(args, int));
 					break;
@@ -40,15 +36,11 @@ int _printf(const char *format, ...)
 				case 'd':
 					leng += print_number(va_arg(args, int));
 					break;
-				case '%':
-					break;
 				case 'b':
 					leng += _bin(va_arg(args, int));
 					break;
 				default:
-					leng++;
-					putchar('%');
-					putchar(format[i]);
+					leng +=	_other_print(format[i]);
 					break;
 			}
 		}
