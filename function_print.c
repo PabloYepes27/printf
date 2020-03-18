@@ -40,11 +40,7 @@ int _other_print(char c, char p, char q)
 		putchar(c);
 		i++;
 	}
-	if (c == p && p == '%' && (q != '%' && q != '\n'))
-	{
-		putchar('%');
-		i++;
-	}
+
 	if (c == p && p == '%' && q == p)
 		i++;
 
