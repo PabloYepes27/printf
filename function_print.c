@@ -34,7 +34,7 @@ int _other_print(char c, char p, char q)
 {
 	int i = 0;
 
-	if (c != '%' && p == '%' && q != '%')
+	if (c != '%')
 	{
 		putchar('%');
 		putchar(c);
@@ -43,12 +43,10 @@ int _other_print(char c, char p, char q)
 	if (c == p && p == '%' && (q != '%' && q != '\n'))
 	{
 		putchar('%');
-		i = i + 2;
-	}
-	if (c == p && p == '%' && q == p)
-	{
 		i++;
 	}
+	if (c == p && p == '%' && q == p)
+		i = i + 2;
 
 	return (i);
 }
